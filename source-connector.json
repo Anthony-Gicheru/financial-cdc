@@ -1,0 +1,14 @@
+{
+  "name": "postgres-source-btc-prices",
+  "config": {
+    "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+    "connection.url": "jdbc:postgresql://source-db:5432/source-db",
+    "connection.user": "user",
+    "connection.password": "password",
+    "table.whitelist": "btc_prices",
+    "mode": "incrementing",
+    "incrementing.column.name": "id",
+    "topic.prefix": "source_",
+    "poll.interval.ms": 1000
+  }
+}
