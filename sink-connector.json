@@ -1,0 +1,14 @@
+{
+  "name": "postgres-sink-btc-prices",
+  "config": {
+    "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+    "connection.url": "jdbc:postgresql://sink-db:5432/sink-db",
+    "connection.user": "user",
+    "connection.password": "password",
+    "topics": "source_btc_prices",
+    "auto.create": "true",
+    "auto.evolve": "true",
+    "insert.mode": "insert",
+    "pk.mode": "none"
+  }
+}
